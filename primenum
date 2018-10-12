@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo " Enter a number"  
+ read num  
+ i=2  
+ ctl=1  
+ while [ $i -lt $num ]  
+ do  
+  a=`expr $num % $i`  
+  if [ $a -eq 0 ]  
+  then  
+  ctl=0  
+  fi  
+  i=`expr $i + 1`  
+ done  
+ if [ $ctl -eq 0 ]  
+ then  
+  echo $num is not a Prime number  
+ else  
+  echo $num is a Prime number  
+ fi  
